@@ -359,13 +359,27 @@
     .quote-block { padding: 24px; }
     .inclusion-item { flex-direction: column; gap: 8px; }
   }
+
+  /* SITE NAV LINKS */
+  nav { flex-wrap: wrap; }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Amber <span>LaLoux</span></div>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
   <a href="#book" class="nav-cta">Book Discovery Call</a>
 </nav>
 

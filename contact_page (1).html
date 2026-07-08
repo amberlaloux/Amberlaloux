@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Amber LaLoux</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --black: #0A0A0A;
+    --dark2: #1A1A1A;
+    --dark3: #252525;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --light-gray: #CCCCCC;
+    --burgundy: #8B2635;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); letter-spacing: 2px; }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    text-decoration: none;
+  }
+
+  .hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(201,168,76,0.09) 0%, transparent 65%);
+  }
+  .hero-inner { position: relative; max-width: 700px; margin: 0 auto; }
+  .hero-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
+  .hero-title { font-family: 'Dancing Script', cursive; font-size: clamp(48px, 7vw, 72px); color: var(--burgundy); line-height: 1.2; margin-bottom: 20px; }
+  .hero-divider { width: 80px; height: 2px; background: var(--gold); margin: 0 auto 28px; }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 24px); font-style: italic; color: var(--light-gray); line-height: 1.6; }
+
+  .contact-section { padding: 80px 40px; background: var(--dark2); }
+  .contact-inner { max-width: 800px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+  .gold-line { width: 60px; height: 2px; background: var(--gold); margin-bottom: 40px; }
+
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+  .contact-card {
+    background: var(--black);
+    border-top: 2px solid var(--gold);
+    padding: 32px 28px;
+    text-align: center;
+  }
+  .contact-icon { font-size: 32px; margin-bottom: 16px; }
+  .contact-card-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); margin-bottom: 8px; font-weight: 600; }
+  .contact-card-sub { font-size: 12px; color: var(--gray); letter-spacing: 1px; margin-bottom: 16px; text-transform: uppercase; }
+  .contact-card-value { font-size: 15px; color: var(--light-gray); line-height: 1.7; margin-bottom: 20px; }
+  .contact-btn {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .contact-btn:hover { background: var(--gold); color: var(--black); }
+  .contact-btn.filled { background: var(--gold); color: var(--black); }
+  .contact-btn.filled:hover { background: var(--gold-light); }
+
+  .scripture-block { border-left: 3px solid var(--gold); padding: 20px 28px; margin: 40px 0; background: rgba(201,168,76,0.05); }
+  .scripture-block p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold); line-height: 1.6; margin-bottom: 8px; }
+  .scripture-block cite { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); font-style: normal; }
+
+  .cta-section { background: var(--black); text-align: center; padding: 100px 40px; position: relative; overflow: hidden; }
+  .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%); }
+  .cta-inner { position: relative; max-width: 700px; margin: 0 auto; }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); color: var(--white); margin-bottom: 16px; line-height: 1.1; font-weight: 700; }
+  .cta-title em { color: var(--gold); font-style: italic; }
+  .cta-body { font-size: 15px; color: var(--light-gray); margin-bottom: 40px; line-height: 1.9; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px 48px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  footer { background: var(--dark2); border-top: 1px solid var(--dark3); padding: 40px; text-align: center; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--white); letter-spacing: 2px; margin-bottom: 12px; }
+  .footer-logo span { color: var(--gold); }
+  .footer-creds { font-size: 12px; color: var(--gray); letter-spacing: 1px; margin-bottom: 20px; }
+  .footer-gold-line { width: 50px; height: 2px; background: var(--gold); margin: 0 auto 20px; }
+  .footer-scripture { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--gold); margin-bottom: 32px; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .footer-bottom { border-top: 1px solid var(--dark3); padding-top: 20px; margin-top: 20px; }
+  .footer-copy { font-size: 11px; color: var(--gray); letter-spacing: 1px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-inner > * { animation: fadeUp 0.8s ease forwards; opacity: 0; }
+  .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-inner > *:nth-child(2) { animation-delay: 0.3s; }
+  .hero-inner > *:nth-child(3) { animation-delay: 0.5s; }
+  .hero-inner > *:nth-child(4) { animation-delay: 0.7s; }
+
+  @media (max-width: 600px) {
+    nav { padding: 14px 20px; }
+    .hero { padding: 120px 24px 60px; }
+    .contact-section { padding: 60px 24px; }
+    .cta-section { padding: 70px 24px; }
+  }
+
+  /* SITE NAV LINKS */
+  nav { flex-wrap: wrap; }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/keepthefaithdesigns7/30min" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Let's Connect</span>
+    <div class="hero-title">I'd Love to<br>Hear From You</div>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Whether you have a question, need prayer, or are ready to take your next step — Amber reads every message personally and responds with love.</p>
+  </div>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <span class="section-label">Ways to Reach Amber</span>
+    <div class="gold-line"></div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <div class="contact-card-title">Email Support</div>
+        <div class="contact-card-sub">General inquiries & support</div>
+        <div class="contact-card-value">support@fromprayer2provision.com</div>
+        <a href="mailto:support@fromprayer2provision.com" class="contact-btn">Send an Email</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📱</div>
+        <div class="contact-card-title">WhatsApp & Phone</div>
+        <div class="contact-card-sub">Booking & appointments</div>
+        <div class="contact-card-value">1-463-281-2999<br>Available for WhatsApp messages</div>
+        <a href="https://wa.me/14632812999" class="contact-btn">Message on WhatsApp</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">f</div>
+        <div class="contact-card-title">Facebook</div>
+        <div class="contact-card-sub">Connect on social media</div>
+        <div class="contact-card-value">Follow Amber for daily encouragement, faith tips, and ministry updates</div>
+        <a href="https://facebook.com/amber.laloux" target="_blank" class="contact-btn">Follow on Facebook</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📅</div>
+        <div class="contact-card-title">Book a Discovery Call</div>
+        <div class="contact-card-sub">Free 30-minute call</div>
+        <div class="contact-card-value">Ready to go from chaos to called? Book your free Discovery Call with Amber today.</div>
+        <a href="https://calendly.com/keepthefaithdesigns7/30min" class="contact-btn filled">Book Your Call</a>
+      </div>
+
+    </div>
+
+    <div class="scripture-block">
+      <p>"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."</p>
+      <cite>— Matthew 7:7</cite>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Not Sure Where<br>to <em>Start?</em></h2>
+    <div style="width:50px;height:2px;background:#C9A84C;margin:20px auto 28px;"></div>
+    <p class="cta-body">Start with a free 30-minute Discovery Call. No pressure. No obligation. Just a warm conversation about where you are and where God is calling you. Amber would love to pray with you and help you find your next step.</p>
+    <a href="https://calendly.com/keepthefaithdesigns7/30min" class="btn-primary">Book Your Free Discovery Call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Amber <span>LaLoux</span></div>
+  <p class="footer-creds">Certified Biblical Health & Life Coach &nbsp;·&nbsp; Global Best-Selling Author &nbsp;·&nbsp; Women's Ministry Leader</p>
+  <div class="footer-gold-line"></div>
+  <p class="footer-scripture">"She is clothed with strength and dignity, and she laughs without fear of the future." — Proverbs 31:25</p>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Amber LaLoux · Keep the Faith Designs · All rights reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
