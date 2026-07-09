@@ -121,6 +121,15 @@
   .kit .script-line { margin-top: 0; }
   .kit p { max-width: 620px; margin: 0 auto 34px; color: #CCCCCC; }
 
+  /* PODCAST */
+  .podcast { background: var(--ink); }
+  .podcast-grid { display: grid; grid-template-columns: 380px 1fr; gap: 60px; align-items: center; max-width: 1000px; margin: 0 auto; }
+  .podcast-cover img { display: block; width: 100%; border: 1px solid var(--gold); box-shadow: 0 18px 50px rgba(201,168,76,0.16); }
+  .podcast-grid .section-label, .podcast-grid .section-title { text-align: left; }
+  .podcast-grid .gold-line { margin: 28px 0; }
+  .podcast-grid p.pod-desc { color: #CCCCCC; margin-bottom: 30px; }
+  @media (max-width: 860px) { .podcast-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; } .podcast-grid .section-label, .podcast-grid .section-title { text-align: center; } .podcast-grid .gold-line { margin: 28px auto; } .podcast-cover { max-width: 340px; margin: 0 auto; } }
+
   /* SPEAKING */
   .speaking { background: var(--charcoal); border-top: 1px solid var(--line); }
   .speaking-grid { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; max-width: 980px; margin: 0 auto; }
@@ -166,6 +175,8 @@
     <a href="https://fromprayer2provision.com/about_v2.html">About</a>
     <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
     <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
     <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
     <a class="nav-cta" href="https://calendly.com/keepthefaithdesigns7/60min">Book Discovery Call</a>
   </div>
@@ -253,6 +264,22 @@
   <a href="https://fromprayer2provision.com/starter_kit_page.html" class="btn-primary">Get the Free Starter Kit</a>
 </section>
 
+<!-- PODCAST -->
+<section class="podcast">
+  <div class="podcast-grid">
+    <div class="podcast-cover">
+      <img src="https://fromprayer2provision.com/podcast_cover.png" alt="Wife Momma Warrior Podcast with Amber LaLoux" onerror="this.parentElement.style.display='none';">
+    </div>
+    <div>
+      <span class="section-label">The Podcast</span>
+      <h2 class="section-title">Wife. Momma. <em>Warrior.</em></h2>
+      <div class="gold-line"></div>
+      <p class="pod-desc">Real testimonies of God's goodness and short teachings on His promises, made for overwhelmed mommas navigating trials, trauma, and unequally yoked marriages. You're not alone. Let's rise together.</p>
+      <a href="https://fromprayer2provision.com/podcast_page.html" class="btn-primary">Explore the Podcast</a>
+    </div>
+  </div>
+</section>
+
 <!-- SPEAKING -->
 <section class="speaking">
   <div class="speaking-grid">
@@ -267,6 +294,15 @@
       <img src="https://fromprayer2provision.com/speaker_photo.png" alt="Amber LaLoux speaking" onerror="this.style.display='none';">
     </div>
   </div>
+</section>
+
+<!-- PAKISTAN -->
+<section class="kit" style="background: radial-gradient(ellipse at 50% 120%, rgba(139,38,53,0.22), transparent 65%), var(--charcoal); border-top: 1px solid var(--line);">
+  <p class="script-line">Brothers and sisters across the ocean 🌍</p>
+  <h2 class="section-title">Our Family in <em>Pakistan</em></h2>
+  <div class="gold-line"></div>
+  <p>Every week I teach the Word of God to men, women, and children in Pakistan. Some walk for hours from the brick kilns just to hear Scripture. Come see what God is building, and stand in the gap with us through prayer, giving, and teaching.</p>
+  <a href="https://fromprayer2provision.com/pakistan_page.html" class="btn-primary">Meet Our Pakistan Family</a>
 </section>
 
 <!-- PRAYER -->

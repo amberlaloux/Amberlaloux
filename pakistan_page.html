@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan Ministry — Amber LaLoux</title>
+<meta name="description" content="Our family in Pakistan: a Bible teaching ministry serving persecuted brothers and sisters. Pray with us, give toward the church build, or join the teaching team.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --charcoal: #111111;
+    --card: #1A1A1A;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --burgundy: #8B2635;
+    --cream: #FAF8F4;
+    --grey: #888888;
+    --line: #222222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--cream); font-family: "Montserrat", sans-serif; font-weight: 300; line-height: 1.7; }
+  img { max-width: 100%; }
+  a { color: inherit; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 22px 40px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(10,10,10,0.94); backdrop-filter: blur(6px); z-index: 50; }
+  .nav-logo { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .nav-logo span { color: var(--gold); }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  .nav-cta { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s; }
+  .nav-cta:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+
+  section { padding: 90px 24px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-label { display: block; text-align: center; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .section-title { font-family: "Cormorant Garamond", serif; text-align: center; font-size: clamp(32px, 4.5vw, 52px); font-weight: 600; line-height: 1.15; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .gold-line { width: 54px; height: 2px; background: var(--gold); margin: 28px auto; }
+  .script-line { font-family: "Dancing Script", cursive; font-size: clamp(26px, 3.5vw, 40px); color: var(--burgundy); text-shadow: 0 0 22px rgba(139,38,53,0.35); }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: background .2s, transform .2s; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-weight: 500; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; padding: 17px 40px; text-decoration: none; transition: background .2s, color .2s; }
+  .btn-ghost:hover { background: var(--gold); color: var(--ink); }
+
+  /* HERO */
+  .hero { text-align: center; padding: 100px 24px 80px; background:
+    radial-gradient(ellipse at 50% -20%, rgba(201,168,76,0.14), transparent 60%), var(--ink); }
+  .hero h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 6vw, 72px); font-weight: 600; line-height: 1.1; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-desc { max-width: 700px; margin: 0 auto; color: #CCCCCC; font-size: 17px; }
+
+  /* SCRIPTURE BAND */
+  .scripture-band { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; padding: 64px 24px; }
+  .scripture-band blockquote { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: clamp(22px, 3vw, 30px); line-height: 1.5; max-width: 800px; margin: 0 auto; color: var(--cream); }
+  .scripture-band blockquote b { color: var(--gold-light); font-weight: 600; }
+  .scripture-band cite { display: block; margin-top: 18px; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+
+  /* STORY */
+  .story p { color: #CCCCCC; margin-bottom: 22px; font-size: 16px; }
+  .story .highlight { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 22px; color: var(--gold-light); border-left: 2px solid var(--gold); padding-left: 24px; margin: 34px 0; }
+
+  /* WHAT GOD IS BUILDING */
+  .building { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .build-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 54px; max-width: 1040px; margin-left: auto; margin-right: auto; }
+  .build-card { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 40px 30px; }
+  .build-icon { font-size: 30px; margin-bottom: 16px; text-align: center; }
+  .build-card h3 { font-family: "Cormorant Garamond", serif; font-size: 25px; font-weight: 600; margin-bottom: 10px; text-align: center; }
+  .build-card p { color: #CCCCCC; font-size: 15px; }
+  @media (max-width: 860px) { .build-grid { grid-template-columns: 1fr; } }
+
+  /* PRAYER NEEDS */
+  .needs { text-align: center; background: radial-gradient(ellipse at 50% 120%, rgba(139,38,53,0.2), transparent 65%), var(--ink); }
+  .needs-list { list-style: none; max-width: 520px; margin: 40px auto; text-align: left; }
+  .needs-list li { padding-left: 30px; position: relative; margin-bottom: 14px; color: #CCCCCC; font-size: 16px; }
+  .needs-list li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+  .needs p.lead { max-width: 640px; margin: 0 auto; color: #CCCCCC; }
+
+  /* WAKE UP */
+  .wake { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
+  .wake p { max-width: 720px; margin: 0 auto 22px; color: #CCCCCC; font-size: 16px; }
+  .wake .big { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: clamp(22px, 3vw, 30px); color: var(--cream); line-height: 1.5; }
+  .wake .big b { color: var(--gold-light); font-weight: 600; }
+
+  /* RESPOND */
+  .respond { background: var(--ink); }
+  .respond-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 54px; max-width: 1040px; margin-left: auto; margin-right: auto; }
+  .respond-card { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 44px 30px 40px; display: flex; flex-direction: column; text-align: center; }
+  .respond-icon { font-size: 32px; margin-bottom: 16px; }
+  .respond-card h3 { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; margin-bottom: 10px; }
+  .respond-card p { color: #CCCCCC; font-size: 15px; flex: 1; margin-bottom: 26px; }
+  .respond-card a { align-self: center; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1px solid var(--gold); padding: 13px 26px; transition: background .2s, color .2s; }
+  .respond-card a:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 860px) { .respond-grid { grid-template-columns: 1fr; } }
+
+  footer { border-top: 1px solid var(--line); padding: 46px 24px; text-align: center; }
+  footer .nav-logo { margin-bottom: 14px; }
+  footer p { font-size: 13px; color: var(--grey); }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--gold-light); }
+  .footer-script { font-family: "Dancing Script", cursive; font-size: 24px; color: var(--burgundy); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/keepthefaithdesigns7/30min" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="section-label">Global Ministry</span>
+  <h1>Our Family in <em>Pakistan</em></h1>
+  <p class="script-line" style="margin: 22px 0 6px;">Brothers and sisters across the ocean 🌍</p>
+  <div class="gold-line"></div>
+  <p class="hero-desc">Every week, I have the honor of opening the Word of God with men, women, and children in Pakistan. Some gather in a half-built church. Some walk for hours from the brick kilns just to hear Scripture taught. They are not strangers. They are family.</p>
+</header>
+
+<!-- SCRIPTURE -->
+<div class="scripture-band">
+  <blockquote>"Remember those in prison as if you were together with them in prison, and <b>those who are mistreated as if you yourselves were suffering</b>."</blockquote>
+  <cite>— Hebrews 13:3</cite>
+</div>
+
+<!-- HOW GOD STARTED IT -->
+<section class="story">
+  <div class="container">
+    <span class="section-label">How It Began</span>
+    <h2 class="section-title">God Confirmed It <em>Twice</em></h2>
+    <div class="gold-line"></div>
+    <p>I started receiving messages from people in Pakistan I had never met. They called me a teacher and asked me to start teaching them the Word of God. That very same week, my pastor told me I had a gift to teach and asked me to lead Wednesday night Bible studies and Sunday morning Sunday school.</p>
+    <p>On my own, I would have said no. But when it all happened together, I knew it was from the Lord.</p>
+    <p class="highlight">God is such a loving Father. He knows me, and He knows I need confirmation. So He lovingly spoke through my pastor at home and through brothers and sisters across the globe in the very same week.</p>
+    <p>Now we meet over Google Meet, and sometimes Facebook video when the internet connection allows. Every gathering, no matter how it happens, is a holy one.</p>
+  </div>
+</section>
+
+<!-- WHAT GOD IS BUILDING -->
+<section class="building">
+  <div class="container" style="max-width:1040px;">
+    <span class="section-label">The Ministry Today</span>
+    <h2 class="section-title">What God Is <em>Building</em></h2>
+    <div class="gold-line"></div>
+    <div class="build-grid">
+      <div class="build-card">
+        <div class="build-icon">⛪</div>
+        <h3>A Church from a Home</h3>
+        <p>Every Saturday morning I meet with a minister who treats me like family. He is building a church out of his own small home. The walls are up and some of the plumbing is finished, and we are praying in the roof, solar panels, electricity, and internet.</p>
+      </div>
+      <div class="build-card">
+        <div class="build-icon">🧵</div>
+        <h3>The Sewing Center</h3>
+        <p>He is also building a sewing center, a program to teach young women in Pakistan how to sew, so they have a skill to provide for their families. He named it after me, which humbles me deeply. He says that is what the Lord led him to do.</p>
+      </div>
+      <div class="build-card">
+        <div class="build-icon">👣</div>
+        <h3>The Brick Kiln Families</h3>
+        <p>Another group has no church building at all. Men, women, and children walk for hours from the brick kilns to reach a connection where we can meet online and open the Word together. Their hunger for God puts me on my face.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRAYER NEEDS -->
+<section class="needs">
+  <p class="script-line">Will you stand with us?</p>
+  <h2 class="section-title">Current Prayer <em>Needs</em></h2>
+  <div class="gold-line"></div>
+  <p class="lead">These are the specific things we are asking God for right now. When you pray, you become part of this ministry.</p>
+  <ul class="needs-list">
+    <li>A roof for the church so the gathering space is protected</li>
+    <li>Solar panels and reliable electricity</li>
+    <li>Stable internet so no one misses the Word</li>
+    <li>Provision and protection for the sewing center and the young women it will serve</li>
+    <li>Safety for our brothers and sisters facing persecution for their faith</li>
+    <li>Rescue and refuge for women facing forced marriages and abuse</li>
+  </ul>
+</section>
+
+<!-- WAKE UP -->
+<section class="wake">
+  <span class="section-label">Why This Matters</span>
+  <h2 class="section-title">They Walk for Hours to Hear <em>the Word</em></h2>
+  <div class="gold-line"></div>
+  <p class="big">There are people so desperate to hear the Word of God that they walk for hours, going without food, comfort, or air conditioning, <b>just to sit under Scripture</b>.</p>
+  <p style="margin-top:26px;">They are persecuted for their faith. Some of the women have had their futures ripped away, forced into marriages, abused, and some even killed, with no one to look to for help but the Lord. These are not headlines. These are our brothers and sisters, and we are called to love them as we love ourselves. That is not a suggestion. It is a commitment, and we have to own that obedience.</p>
+</section>
+
+<!-- RESPOND -->
+<section class="respond">
+  <div class="container" style="max-width:1040px;">
+    <span class="section-label">Answer the Call</span>
+    <h2 class="section-title">Three Ways to <em>Stand in the Gap</em></h2>
+    <div class="gold-line"></div>
+    <div class="respond-grid">
+      <div class="respond-card">
+        <div class="respond-icon">🙏</div>
+        <h3>Pray</h3>
+        <p>Commit to praying for this ministry like you would pray for your own family, because they are. Ask me for specific prayer needs any time.</p>
+        <a href="https://fromprayer2provision.com/contact_page.html">I Will Pray</a>
+      </div>
+      <div class="respond-card">
+        <div class="respond-icon">💛</div>
+        <h3>Give</h3>
+        <p>If the Lord lays it on your heart, your giving helps finish the church roof, bring electricity and internet, and open the sewing center. Gifts are sent securely through PayPal as personal gifts.</p>
+        <a href="https://www.paypal.com/ncp/payment/2QPFKL3NVX23U">I Want to Give</a>
+      </div>
+      <div class="respond-card">
+        <div class="respond-icon">📖</div>
+        <h3>Join the Team</h3>
+        <p>If God is calling you to help teach these precious women and children Scripture, I would love to have you on the team.</p>
+        <a href="mailto:support@fromprayer2provision.com?subject=I%20want%20to%20join%20the%20Pakistan%20teaching%20team">I Want to Teach</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="nav-logo">Amber <span>LaLoux</span></div>
+  <p><a href="mailto:support@fromprayer2provision.com">support@fromprayer2provision.com</a></p>
+  <p style="margin-top:10px;">© 2026 From Prayer to Provision · Keep the Faith Designs</p>
+  <p class="footer-script">Love your brothers and sisters as you love yourself.</p>
+</footer>
+
+</body>
+</html>
