@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Peaceful Mama Starter Kit — Free Gift from Amber LaLoux</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --black: #0A0A0A;
+    --dark2: #1A1A1A;
+    --dark3: #252525;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --light-gray: #CCCCCC;
+    --burgundy: #8B2635;
+    --cream: #FAF8F4;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); letter-spacing: 2px; }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 40px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(201,168,76,0.09) 0%, transparent 65%);
+  }
+  .hero-inner { position: relative; max-width: 860px; margin: 0 auto; }
+  .hero-tag { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
+  .hero-title { font-family: 'Dancing Script', cursive; font-size: clamp(44px, 7vw, 76px); color: var(--burgundy); line-height: 1.2; margin-bottom: 20px; }
+  .hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
+  .hero-subtitle em { color: var(--gold); font-style: italic; }
+  .hero-divider { width: 80px; height: 2px; background: var(--gold); margin: 0 auto 28px; }
+  .hero-desc { font-size: 15px; color: var(--light-gray); max-width: 620px; margin: 0 auto 16px; line-height: 1.9; }
+
+  /* WHAT'S INSIDE PILLS */
+  .inside-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 24px 0 36px; }
+  .pill { border: 1px solid rgba(201,168,76,0.4); padding: 10px 20px; font-size: 12px; color: var(--gold); letter-spacing: 1px; font-family: 'Montserrat', sans-serif; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 52px;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .hero-note { font-size: 12px; color: var(--gray); letter-spacing: 1px; }
+
+  /* SCRIPTURE PILL */
+  .scripture-pill {
+    display: inline-block;
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 18px 32px;
+    margin-bottom: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    color: #C9A84C !important;
+    line-height: 1.6;
+  }
+  .scripture-pill span { display: block; font-size: 12px; font-style: normal; letter-spacing: 2px; color: #888888; margin-top: 6px; font-family: 'Montserrat', sans-serif; }
+
+  /* WHAT'S INSIDE */
+  .inside-section { background: var(--dark2); padding: 100px 40px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-label { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 5vw, 52px); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 24px; }
+  .section-title em { color: var(--gold); font-style: italic; }
+  .gold-line { width: 60px; height: 2px; background: var(--gold); margin-bottom: 40px; }
+  .body-text { font-size: 17px; color: var(--light-gray); line-height: 1.9; margin-bottom: 20px; }
+
+  .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px; }
+  .inside-card { border-left: 4px solid var(--gold); padding: 28px 28px; background: var(--black); }
+  .inside-number { font-family: 'Cormorant Garamond', serif; font-size: 52px; color: var(--gold); opacity: 0.25; line-height: 1; margin-bottom: 8px; }
+  .inside-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); margin-bottom: 10px; font-weight: 600; }
+  .inside-desc { font-size: 14px; color: var(--light-gray); line-height: 1.8; }
+
+  /* SCRIPTURE BLOCK */
+  .scripture-block { border-left: 3px solid var(--gold); padding: 20px 28px; margin: 36px 0; background: rgba(201,168,76,0.05); }
+  .scripture-block p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold); line-height: 1.6; margin-bottom: 8px; }
+  .scripture-block cite { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); font-style: normal; }
+
+  /* AMBER SECTION */
+  .amber-section { background: var(--black); padding: 100px 40px; }
+  .amber-inner { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+  .amber-photo { width: 340px; flex-shrink: 0; }
+  .amber-photo img { width: 100%; height: 440px; object-fit: cover; object-position: center center; display: block; border: 2px solid var(--gold); }
+  .amber-content { flex: 1; min-width: 260px; }
+  .amber-voice { font-family: 'Dancing Script', cursive; font-size: 32px; color: var(--burgundy); line-height: 1.6; margin-bottom: 16px; }
+
+  /* FORM SECTION */
+  .form-section { background: var(--dark2); padding: 100px 40px; text-align: center; position: relative; overflow: hidden; }
+  .form-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,168,76,0.07) 0%, transparent 70%); }
+  .form-inner { position: relative; max-width: 580px; margin: 0 auto; }
+  .form-title { font-family: 'Dancing Script', cursive; font-size: clamp(36px, 5vw, 58px); color: var(--burgundy); line-height: 1.2; margin-bottom: 12px; }
+  .form-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--light-gray); margin-bottom: 32px; line-height: 1.6; }
+  .form-group { margin-bottom: 18px; text-align: left; }
+  .form-label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .form-input {
+    width: 100%;
+    background: var(--black);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--white);
+    padding: 16px 20px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .form-input:focus { border-color: var(--gold); }
+  .form-note { font-size: 12px; color: var(--gray); margin-top: 16px; line-height: 1.7; }
+  .success-msg { display: none; background: rgba(201,168,76,0.08); border: 1px solid var(--gold); padding: 36px 28px; margin-top: 24px; }
+  .success-title { font-family: 'Dancing Script', cursive; font-size: 32px; color: var(--burgundy); margin-bottom: 12px; }
+  .success-body { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--gold); line-height: 1.7; }
+  .success-name { font-size: 13px; color: var(--gray); margin-top: 12px; font-family: 'Montserrat', sans-serif; }
+
+  /* PRESS */
+  .press-section { background: #111; padding: 60px 40px; text-align: center; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+
+  /* FOOTER */
+  footer { background: var(--dark2); border-top: 1px solid var(--dark3); padding: 40px; text-align: center; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--white); letter-spacing: 2px; margin-bottom: 12px; }
+  .footer-logo span { color: var(--gold); }
+  .footer-gold-line { width: 50px; height: 2px; background: var(--gold); margin: 16px auto; }
+  .footer-scripture { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--gold); margin-bottom: 24px; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .footer-copy { font-size: 11px; color: var(--gray); letter-spacing: 1px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-inner > * { animation: fadeUp 0.8s ease forwards; opacity: 0; }
+  .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-inner > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-inner > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-inner > *:nth-child(4) { animation-delay: 0.55s; }
+  .hero-inner > *:nth-child(5) { animation-delay: 0.65s; }
+  .hero-inner > *:nth-child(6) { animation-delay: 0.75s; }
+  .hero-inner > *:nth-child(7) { animation-delay: 0.85s; }
+
+  @media (max-width: 600px) {
+    nav { padding: 14px 20px; }
+    .inside-section, .amber-section, .form-section { padding: 70px 24px; }
+    .amber-inner { flex-direction: column; }
+    .amber-photo { width: 100%; }
+    .amber-photo img { height: 380px; }
+    .inside-grid { grid-template-columns: 1fr; }
+  }
+
+  /* SITE NAV LINKS */
+  nav { flex-wrap: wrap; }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://keepthefaithdesigns7.systeme.io/starter-kit" class="nav-cta">Get My Free Kit</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">A Free Gift From Amber &nbsp;·&nbsp; No Strings Attached</span>
+    <div class="hero-title">Sweet Mama, This Was<br>Made Just for You</div>
+    <h1 class="hero-subtitle">The Peaceful Mama<br><em>Starter Kit</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">If you are exhausted, overwhelmed, and desperate for peace in your home and your heart, this free kit was created with you in mind and prayed over before it ever reached you. Because only true peace comes from Jesus and that is the foundation everything in this kit is built on.</p>
+    <div class="inside-pills">
+      <div class="pill">✦ 7-Day Prayer Challenge</div>
+      <div class="pill">✦ 8 Printable Scripture Cards</div>
+      <div class="pill">✦ Sample Meal Plan</div>
+    </div>
+    <div class="scripture-pill" style="color:#C9A84C !important;">
+      "Come to me, all you who are weary and burdened, and I will give you rest."
+      <span>— Matthew 11:28</span>
+    </div>
+    <a href="https://keepthefaithdesigns7.systeme.io/starter-kit" class="btn-primary">Yes! Send Me My Free Kit!</a>
+    <p class="hero-note">Completely free &nbsp;·&nbsp; Delivered straight to your inbox</p>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="container">
+    <span class="section-label">What Is Inside Your Free Kit</span>
+    <h2 class="section-title">Three Things to Help You Find <em>Peace Again.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">This is not just another freebie that sits in your downloads folder. This kit was built to be used. Starting today. One small step at a time.</p>
+    <div class="inside-grid">
+
+      <div class="inside-card">
+        <div class="inside-number">01</div>
+        <div class="inside-title">The 7-Day Peaceful Mama Prayer Challenge</div>
+        <p class="inside-desc">Seven days of prayers written specifically for the overwhelmed Christian mama. Each day covers a different area of your life, from surrender and peace in the home to faith over fear and walking in your calling. Each prayer comes with a reflection question to help you go deeper with God.</p>
+      </div>
+
+      <div class="inside-card">
+        <div class="inside-number">02</div>
+        <div class="inside-title">Eight Printable Scripture Cards</div>
+        <p class="inside-desc">Print them, cut them apart, and put them everywhere you need encouragement. Your mirror. Your fridge. Your dashboard. Your desk. Eight scriptures specifically chosen for the mama who needs to be reminded of who she is and whose she is. Speak them out loud every single day.</p>
+      </div>
+
+      <div class="inside-card">
+        <div class="inside-number">03</div>
+        <div class="inside-title">A Sample Meal Plan from the Mama Planner</div>
+        <p class="inside-desc">One of the biggest sources of stress in a home is the daily question of what is for dinner. This sample week of simple family-friendly meals gives you a taste of what life looks like when your week is planned with intention. Each meal includes an ingredient list so you can shop with ease.</p>
+      </div>
+
+    </div>
+
+    <div class="scripture-block" style="margin-top: 48px;">
+      <p>"She is clothed with strength and dignity, and she laughs without fear of the future."</p>
+      <cite>— Proverbs 31:25</cite>
+    </div>
+  </div>
+</section>
+
+<!-- AMBER SECTION -->
+<section class="amber-section">
+  <div class="amber-inner">
+    <div class="amber-photo">
+      <img src="https://i.imgur.com/mwbSIzI.jpeg" alt="Amber LaLoux" />
+    </div>
+    <div class="amber-content">
+      <span class="section-label">A Note From Amber</span>
+      <h2 class="section-title" style="font-size:clamp(34px,4vw,52px);">I Made This Because<br>I <em>Needed It Too.</em></h2>
+      <div class="gold-line"></div>
+      <p class="amber-voice">Sweet mama, I have been where you are.</p>
+      <p class="body-text">I know what it feels like to wake up exhausted before the day even starts. To feel like everyone needs something from you and there is nothing left to give. To pray and wonder if God is even listening.</p>
+      <p class="body-text">I created this starter kit because these are the exact tools I wish someone had handed me in my most overwhelmed seasons of motherhood. A prayer to pray when I had no words. A scripture to speak when the enemy was loud. A simple plan so dinner was not one more thing to figure out.</p>
+      <p class="body-text">This is my gift to you. No strings attached. Just one mama who has been there, handing another mama something that helped.</p>
+      <div class="scripture-block">
+        <p>"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."</p>
+        <cite>— Jeremiah 29:11</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press-section">
+  <div style="width:50px;height:2px;background:#C9A84C;margin:0 auto 24px;"></div>
+  <div style="background:#fff;padding:8px 16px;width:fit-content;margin:0 auto;">
+    <img src="https://i.imgur.com/bybjf3c.png" alt="As Featured On CBS NBC FOX ABC AP" style="display:block;width:440px;max-width:90vw;height:auto;" />
+  </div>
+  <div style="width:50px;height:2px;background:#C9A84C;margin:24px auto 0;"></div>
+</section>
+
+<!-- CTA -->
+<section class="form-section" id="form">
+  <div class="form-inner">
+    <div class="form-title">I Don't Believe You're<br>Here by Accident</div>
+    <p class="form-sub">Click the button below and your free Peaceful Mama Starter Kit will be on its way to your inbox right away.</p>
+    <a href="https://keepthefaithdesigns7.systeme.io/starter-kit" class="btn-primary" style="display:inline-block;margin-top:16px;">
+      Yes! Send Me My Free Starter Kit!
+    </a>
+    <p class="form-note" style="margin-top:20px;">Completely free &nbsp;·&nbsp; Delivered straight to your inbox &nbsp;·&nbsp; No strings attached</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Amber <span>LaLoux</span></div>
+  <p style="font-size:12px;color:#888;letter-spacing:1px;margin-bottom:8px;">Certified Biblical Health &amp; Life Coach &nbsp;·&nbsp; Global Best-Selling Author &nbsp;·&nbsp; Speaker</p>
+  <div class="footer-gold-line"></div>
+  <p class="footer-scripture">"She is clothed with strength and dignity, and she laughs without fear of the future." — Proverbs 31:25</p>
+  <div style="border-top:1px solid #252525;padding-top:20px;margin-top:20px;">
+    <p class="footer-copy">© 2026 Amber LaLoux · Keep the Faith Designs · All rights reserved</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

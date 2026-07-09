@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Peaceful Mama Intensive — Amber LaLoux</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #252525;
+    --white: #FFFFFF;
+    --cream: #FAF8F4;
+    --gray: #888888;
+    --light-gray: #CCCCCC;
+    --teal: #4ABFAD;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); letter-spacing: 2px; }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 40px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(201,168,76,0.09) 0%, transparent 65%);
+  }
+  .hero-inner { position: relative; max-width: 860px; margin: 0 auto; }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 9vw, 92px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-divider { width: 80px; height: 2px; background: var(--gold); margin: 0 auto 28px; }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 3vw, 27px);
+    font-style: italic;
+    color: var(--light-gray);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+  .hero-desc {
+    font-size: 15px;
+    color: var(--light-gray);
+    max-width: 620px;
+    margin: 0 auto 32px;
+    line-height: 1.9;
+  }
+  .scripture-pill {
+    display: inline-block;
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 14px 28px;
+    margin-bottom: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.5;
+  }
+  .scripture-pill span { display: block; font-size: 12px; font-style: normal; letter-spacing: 2px; color: var(--gray); margin-top: 6px; font-family: 'Montserrat', sans-serif; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px 48px;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .hero-note { font-size: 12px; color: var(--gray); letter-spacing: 1px; }
+
+  /* PRESS */
+  .press-bar {
+    background: var(--dark2);
+    border-top: 2px solid var(--gold);
+    border-bottom: 1px solid var(--dark3);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .press-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gray); }
+  .press-logos { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; justify-content: center; }
+  .press-badge-img { height: 60px; width: auto; } .press-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: var(--light-gray); letter-spacing: 1px; }
+
+  /* GENERAL SECTION */
+  section { padding: 100px 40px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 24px; }
+  .section-title em { color: var(--gold); font-style: italic; }
+  .gold-line { width: 60px; height: 2px; background: var(--gold); margin-bottom: 32px; }
+  .body-text { font-size: 15px; color: var(--light-gray); line-height: 1.9; margin-bottom: 20px; }
+
+  /* SCRIPTURE BLOCK */
+  .scripture-block {
+    border-left: 3px solid var(--gold);
+    padding: 20px 28px;
+    margin: 36px 0;
+    background: rgba(201,168,76,0.05);
+  }
+  .scripture-block p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .scripture-block cite {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-style: normal;
+  }
+
+  /* PROBLEM */
+  .problem { background: var(--dark2); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .problem-card {
+    border-left: 3px solid var(--gold);
+    padding: 22px 24px;
+    background: var(--dark3);
+  }
+  .problem-card p { font-size: 15px; color: var(--light-gray); line-height: 1.7; font-style: italic; }
+
+  /* TESTIMONY */
+  .testimony { background: var(--black); }
+  .quote-block {
+    border-left: 4px solid var(--gold);
+    padding: 32px 40px;
+    background: var(--dark2);
+    margin: 40px 0;
+  }
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .quote-attr { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); }
+
+  /* PROMISE */
+  .promise { background: var(--dark2); }
+  .promise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .promise-item { display: flex; gap: 16px; align-items: flex-start; }
+  .promise-check { color: var(--gold); font-size: 20px; margin-top: 2px; flex-shrink: 0; }
+  .promise-text { font-size: 15px; color: var(--light-gray); line-height: 1.7; }
+
+  /* INCLUSIONS */
+  .inclusions { background: var(--black); }
+  .inclusion-list { margin-top: 48px; }
+  .inclusion-item {
+    display: flex;
+    gap: 28px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--dark3);
+    align-items: flex-start;
+  }
+  .inclusion-item:last-child { border-bottom: none; }
+  .inclusion-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 60px;
+  }
+  .inclusion-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--white); margin-bottom: 8px; font-weight: 600; }
+  .inclusion-content p { font-size: 14px; color: var(--light-gray); line-height: 1.8; }
+
+  /* FOR YOU */
+  .for-you { background: var(--dark2); }
+  .for-you-list { margin-top: 40px; }
+  .for-you-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--dark3);
+  }
+  .for-you-item:last-child { border-bottom: none; }
+  .checkmark { color: var(--gold); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .for-you-item p { font-size: 15px; color: var(--light-gray); line-height: 1.7; }
+
+  /* CREDENTIALS */
+  .credentials { background: var(--black); }
+  .cred-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .cred-item { background: var(--dark2); border-top: 2px solid var(--gold); padding: 24px 20px; text-align: center; }
+  .cred-item p { font-size: 13px; color: var(--light-gray); line-height: 1.6; }
+
+  /* FAQ */
+  .faq { background: var(--dark2); }
+  .faq-list { margin-top: 48px; }
+  .faq-item { border-bottom: 1px solid var(--dark3); padding: 28px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); margin-bottom: 12px; font-weight: 600; }
+  .faq-a { font-size: 14px; color: var(--light-gray); line-height: 1.8; }
+
+  /* CTA */
+  .cta-section {
+    background: var(--black);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+  }
+  .cta-inner { position: relative; max-width: 700px; margin: 0 auto; }
+  .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 700; color: var(--white); margin-bottom: 16px; line-height: 1.1; }
+  .cta-section h2 em { color: var(--gold); font-style: italic; }
+  .cta-section p { font-size: 15px; color: var(--light-gray); margin-bottom: 32px; line-height: 1.9; }
+  .cta-payment { margin-top: 20px; font-size: 13px; color: var(--gray); letter-spacing: 1px; }
+  .cta-warmth { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--light-gray); margin-bottom: 40px; line-height: 1.6; }
+
+  /* FOOTER */
+  footer { background: var(--dark2); border-top: 1px solid var(--dark3); padding: 40px; text-align: center; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--white); letter-spacing: 2px; margin-bottom: 12px; }
+  .footer-logo span { color: var(--gold); }
+  .footer-copy { font-size: 11px; color: var(--gray); letter-spacing: 1px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-inner > * { animation: fadeUp 0.8s ease forwards; opacity: 0; }
+  .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-inner > *:nth-child(2) { animation-delay: 0.3s; }
+  .hero-inner > *:nth-child(3) { animation-delay: 0.45s; }
+  .hero-inner > *:nth-child(4) { animation-delay: 0.55s; }
+  .hero-inner > *:nth-child(5) { animation-delay: 0.65s; }
+  .hero-inner > *:nth-child(6) { animation-delay: 0.75s; }
+  .hero-inner > *:nth-child(7) { animation-delay: 0.85s; }
+  .hero-inner > *:nth-child(8) { animation-delay: 0.95s; }
+
+
+  .footer-inner { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 48px; }
+  .footer-photo-wrap { width: 180px; height: 240px; border: 2px solid var(--gold); overflow: hidden; flex-shrink: 0; }
+  .footer-img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .footer-center { text-align: center; }
+  .footer-creds { font-size: 12px; color: var(--gray); letter-spacing: 1px; font-family: "Montserrat", sans-serif; margin-bottom: 20px; }
+  .footer-gold-line { width: 50px; height: 2px; background: var(--gold); margin: 0 auto 20px; }
+  .footer-press-badge { background: var(--white); padding: 12px 20px; display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+  .press-as-text { font-size: 13px; letter-spacing: 4px; color: #888; font-family: "Montserrat", sans-serif; margin-bottom: 20px; text-align: center; }
+  .press-logos-large { display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
+  .press-logo-text { font-family: "Cormorant Garamond", serif; font-size: 52px; font-weight: 700; color: #fff; letter-spacing: 2px; }
+  .press-as-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #888; font-family: "Montserrat", sans-serif; white-space: nowrap; }
+  .press-logos-row { display: flex; gap: 14px; align-items: center; }
+  .press-l { font-family: "Cormorant Garamond", serif; font-size: 16px; font-weight: 700; color: #111; letter-spacing: 1px; }
+  .footer-bottom { border-top: 1px solid var(--dark3); padding-top: 24px; text-align: center; margin-top: 20px; }
+
+  .press-feature-section { background: #111; padding: 80px 40px; text-align: center; border-top: 1px solid #222; border-bottom: 1px solid #222; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+  .press-feature-inner { max-width: 700px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .press-feature-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: "Montserrat", sans-serif; display: block; margin-bottom: 20px; }
+  .press-feature-gold-line { width: 50px; height: 2px; background: #C9A84C; margin: 0 auto 36px; }
+  .press-feature-badge { display: block; margin: 0 auto; background: #fff; padding: 16px 24px; text-align: center; }
+  .press-badge-large { width: 480px; height: auto; display: block; margin: 0 auto; max-width: 90vw; }
+  .footer-creds { font-size: 12px; color: var(--gray); letter-spacing: 1px; font-family: "Montserrat", sans-serif; margin-bottom: 20px; }
+  .footer-gold-line { width: 50px; height: 2px; background: var(--gold); margin: 0 auto 20px; }
+  .footer-scripture { font-family: "Cormorant Garamond", serif; font-size: 17px; font-style: italic; color: var(--gold); margin-bottom: 32px; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .footer-bottom { border-top: 1px solid var(--dark3); padding-top: 20px; margin-top: 20px; }
+  @media (max-width: 600px) {
+    nav { padding: 14px 20px; }
+    section { padding: 70px 24px; }
+    .press-bar { padding: 16px 24px; gap: 20px; }
+    .quote-block { padding: 24px; }
+    .inclusion-item { flex-direction: column; gap: 8px; }
+  }
+
+  /* SITE NAV LINKS */
+  nav { flex-wrap: wrap; }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="#book" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Private 1-on-1 Biblical Coaching</span>
+    <h1>The Peaceful Mama<br><em>Intensive</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">From Chaos to Called — 90 Days with Amber LaLoux</p>
+    <p class="hero-desc">Sweet mama, you were never meant to carry all of this alone. This is a transformative, private coaching experience for the exhausted, overwhelmed mom who is ready to walk in the peace, power, and God-given authority she was always meant to have.</p>
+    <div class="scripture-pill">
+      "She is clothed with strength and dignity, and she laughs without fear of the future."
+      <span>— Proverbs 31:25</span>
+    </div>
+    <a href="#book" class="btn-primary">Book Your Free Discovery Call</a>
+    <p class="hero-note">A free 30-minute call · No pressure · Just clarity</p>
+  </div>
+</section>
+
+<!-- PRESS BAR -->
+<div class="press-bar">
+  <span class="press-label">As Featured On</span>
+  <div class="press-logos">
+    <span class="press-logo">⊙ CBS</span>
+    <span class="press-logo">NBC</span>
+    <span class="press-logo">FOX</span>
+    <span class="press-logo">abc</span>
+    <span class="press-logo">AP</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <span class="section-label">I See You, Mama</span>
+    <h2 class="section-title">You Love God. But Right Now<br>You Are <em>Running on Empty.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">You didn't wake up wanting to feel this way. You love your family deeply. You love God. But somewhere between the laundry piles, the sleepless nights, the unanswered prayers, and the endless decisions — you lost yourself. And the peace God promised you feels impossibly far away.</p>
+    <p class="body-text">Can I ask you something? Does any of this feel familiar?</p>
+    <div class="problem-grid">
+      <div class="problem-card"><p>"I know I should read my Bible but I don't even know where to start — and that makes me feel guilty."</p></div>
+      <div class="problem-card"><p>"I'm praying for my marriage alone, in silence, wondering if God even hears me anymore."</p></div>
+      <div class="problem-card"><p>"I yell at my kids and then feel crushing guilt. I love them so much but I can't break this cycle."</p></div>
+      <div class="problem-card"><p>"I'm so overwhelmed by daily decisions I can't even figure out what to make for dinner."</p></div>
+      <div class="problem-card"><p>"I know God has a calling on my life but I'm too exhausted to even think about it."</p></div>
+      <div class="problem-card"><p>"I feel alone — even in a house full of people. I need someone who actually understands."</p></div>
+    </div>
+    <div class="scripture-block">
+      <p>"Come to me, all you who are weary and burdened, and I will give you rest."</p>
+      <cite>— Matthew 11:28</cite>
+    </div>
+    <p class="body-text">Sweet friend — that weariness you feel? God sees it. And He has more for you than this. You don't have to figure it out alone.</p>
+  </div>
+</section>
+
+<!-- TESTIMONY -->
+<section class="testimony">
+  <div class="container">
+    <span class="section-label">Amber's Story</span>
+    <h2 class="section-title">I Prayed for My Husband<br>for <em>17 Years.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">Mama, I want you to know — I have been exactly where you are. I know what it feels like to pray in silence and wonder if God is listening. To feel alone in your marriage even when your husband is right there. To be overwhelmed, exhausted, and quietly losing yourself while trying to hold everything together for everyone else.</p>
+    <p class="body-text">For 17 years, I stood in faith for my husband to come to the Lord. Alone. In the quiet. Trusting God when nothing seemed to change. And in those 17 years, God built something powerful in me — a prayer life that moves mountains, a faith that doesn't waver, and a practical toolkit that I now use every single day to help other mamas find the same peace I found.</p>
+    <p class="body-text">My husband came to the Lord. God answered. And every hard year was worth it. Today I am a certified biblical health and life coach, a global best-selling author, and a women's ministry leader — but more than any title, I am a woman who knows what it is to stand in faith and believe. And I am here to walk beside you and teach you how to do the same.</p>
+    <div class="quote-block">
+      <p class="quote-text">"If God did it for me, He can do it for you. I am living proof that prayer, faith, and standing in your God-given authority works."</p>
+      <span class="quote-attr">— Amber LaLoux, Certified Biblical Life Coach</span>
+    </div>
+    <div class="scripture-block">
+      <p>"For I know the plans I have for you, declares the Lord — plans to prosper you and not to harm you, plans to give you hope and a future."</p>
+      <cite>— Jeremiah 29:11</cite>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="container">
+    <span class="section-label">Your Transformation</span>
+    <h2 class="section-title">Imagine What Your Life Looks Like<br><em>90 Days from Now.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">This is not just a coaching program. This is a complete transformation — spirit, soul, and body. Here is what walking in your God-given authority actually looks like in your everyday life:</p>
+    <div class="promise-grid">
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">A prayer life that moves mountains — not just recites words before bed</p></div>
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">Peace in your home that the world cannot steal from you or your children</p></div>
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">A daily rhythm that eliminates decision fatigue — you know what to do and when</p></div>
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">The confidence to walk in the authority Christ has already given you as a woman</p></div>
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">A healthier body, a stronger mind, and a spirit that is fully alive</p></div>
+      <div class="promise-item"><span class="promise-check">✦</span><p class="promise-text">A marriage you are no longer just surviving — but standing in faith for</p></div>
+    </div>
+    <div class="scripture-block">
+      <p>"The thief comes only to steal and kill and destroy. I have come that they may have life, and have it to the full."</p>
+      <cite>— John 10:10</cite>
+    </div>
+    <p class="body-text">That full life? It belongs to you. Let's go get it together. 🙏</p>
+  </div>
+</section>
+
+<!-- INCLUSIONS -->
+<section class="inclusions">
+  <div class="container">
+    <span class="section-label">What's Included</span>
+    <h2 class="section-title">Everything You Need to Go<br>From <em>Chaos to Called.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">When you say yes to The Peaceful Mama Intensive, here is exactly what we do together over 90 days:</p>
+    <div class="inclusion-list">
+      <div class="inclusion-item">
+        <div class="inclusion-num">01</div>
+        <div class="inclusion-content">
+          <h3>The Chaos Audit — Week 1</h3>
+          <p>We start by getting honest. In our first private session, Amber identifies the exact stressors stealing your peace — marriage, health, motherhood, finances, identity — and builds your personalized 90-day peace plan together with you. You will leave this call with clarity you have never had before.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">02</div>
+        <div class="inclusion-content">
+          <h3>Six Private 1-on-1 Coaching Sessions</h3>
+          <p>Bi-weekly, 60-minute sessions via Google Meet — just you and Amber. We cover faith, prayer strategy, biblical health, home rhythms, and mindset. And every single session ends in prayer together. Because this work is too important not to bring God into the room.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">03</div>
+        <div class="inclusion-content">
+          <h3>The Prayer Warrior Framework</h3>
+          <p>Amber's personal system for powerful, strategic prayer — the same approach she used during 17 years of interceding for her husband. You will receive written prayers, fasting guides, and scripture declarations that you can use every single day for the rest of your life.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">04</div>
+        <div class="inclusion-content">
+          <h3>Your Custom Done-For-You Life Plan</h3>
+          <p>No more starting from scratch every morning. Amber builds you a personalized meal plan, daily rhythm, scripture reading plan, and self-care routine — designed specifically for YOUR life, YOUR season, and YOUR family. Done for you, with love.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">05</div>
+        <div class="inclusion-content">
+          <h3>The Complete Done-For-You Mama Planner 2026</h3>
+          <p>The full digital planner (retail value $99) is yours as part of this program — with meal plans, shopping lists, exercise routines, scripture, prayer, and self-love prompts. Plus Amber personally onboards you so you actually open it and use it every day.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">06</div>
+        <div class="inclusion-content">
+          <h3>WhatsApp Voice & Text Support (Mon–Fri)</h3>
+          <p>Life doesn't wait for your next coaching session. Message Amber between sessions for real-time accountability, prayer, and support. You are never walking this alone — not for a single day of these 90 days.</p>
+        </div>
+      </div>
+      <div class="inclusion-item">
+        <div class="inclusion-num">07</div>
+        <div class="inclusion-content">
+          <h3>Monthly Emergency Prayer Call</h3>
+          <p>When the hard days hit — and sweet mama, they will — Amber shows up. One dedicated emergency support call per month for those moments when you need someone to pray with you and speak truth over your life right now.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scripture-block">
+      <p>"Two are better than one, because they have a good return for their labor. If either of them falls down, one can help the other up."</p>
+      <cite>— Ecclesiastes 4:9-10</cite>
+    </div>
+  </div>
+</section>
+
+<!-- FOR YOU -->
+<section class="for-you">
+  <div class="container">
+    <span class="section-label">Is This For You?</span>
+    <h2 class="section-title">This Is For You <em>If...</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">The Peaceful Mama Intensive is for the woman who is done just getting by. If you read any of these and felt something rise up in your spirit — this is for you:</p>
+    <div class="for-you-list">
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You are a mom who is exhausted, overwhelmed, and quietly losing yourself</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You are praying for your marriage alone and wondering if God still hears you</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You know you need to be in the Word but you don't know where to start</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You struggle with decision fatigue — even the small decisions feel impossible</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You lose patience with your kids and feel crushing guilt — you are ready to break that cycle</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You are battling a health challenge and ready to trust God as your healer</p></div>
+      <div class="for-you-item"><span class="checkmark">✓</span><p>You know God has a calling on your life and you are finally ready to walk in it</p></div>
+    </div>
+    <div class="scripture-block">
+      <p>"I can do all things through Christ who strengthens me."</p>
+      <cite>— Philippians 4:13</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials">
+  <div class="container">
+    <span class="section-label">You Are in Safe Hands</span>
+    <h2 class="section-title">Why Women Trust <em>Amber LaLoux.</em></h2>
+    <div class="gold-line"></div>
+    <p class="body-text">Amber brings both professional credentials and personal experience to every coaching relationship. She has walked the hard road — and come out the other side with tools, wisdom, and a calling to bring you with her.</p>
+    <div class="cred-grid">
+      <div class="cred-item"><p>Certified Biblical Health & Life Coach</p></div>
+      <div class="cred-item"><p>Global Best-Selling Author</p></div>
+      <div class="cred-item"><p>Featured on CBS · NBC · FOX · ABC · AP</p></div>
+      <div class="cred-item"><p>Women's Ministry Leader — Serving Women Internationally</p></div>
+      <div class="cred-item"><p>Creator of The Complete Done-For-You Mama Planner</p></div>
+      <div class="cred-item"><p>Founder of The Peaceful Mama Collective</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <span class="section-label">Your Questions Answered</span>
+    <h2 class="section-title">I Know You Might Be <em>Wondering...</em></h2>
+    <div class="gold-line"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">What exactly happens on the Discovery Call?</p>
+        <p class="faq-a">It's a free, pressure-free 30-minute conversation — just you and Amber. She'll listen to where you are, what you're carrying, and what you're hoping for. She'll share how The Intensive works and whether it feels like the right fit. No pressure. No sales pitch. Just two women talking honestly about your life and your next step.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How does payment work?</p>
+        <p class="faq-a">You can pay in full or choose the flexible 5-payment plan. All payments are processed securely through PayPal. Investment details are shared warmly and openly on your Discovery Call — there are no surprises.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if I've never done coaching before?</p>
+        <p class="faq-a">Most of Amber's clients have never worked with a coach before. The Intensive is designed to meet you exactly where you are — no experience needed, no perfect spiritual life required. Just a willing heart and a desire to change.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How is this different from a Bible study or church group?</p>
+        <p class="faq-a">A Bible study is wonderful — but it was never designed to address the specific, personal chaos in YOUR home. This is private, personalized, and built entirely around your life, your struggles, and your season. Every session, every plan, every prayer is tailored specifically to you. There is no one-size-fits-all here.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is it okay to charge for biblical coaching? I thought Christians shouldn't take money for ministry.</p>
+        <p class="faq-a">Such a beautiful and honest question — and one Amber asked herself too. Scripture is actually clear on this: "The worker deserves his wages" (Luke 10:7), and "the one who receives instruction in the word should share all good things with their instructor" (Galatians 6:6). Amber is not charging for the gospel — which is freely given. She is charging for her time, her expertise, her certification, and 17 years of walking through fire so you don't have to walk through it alone. God called her to this work. And He will provide the investment for the woman He has called to receive it.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if I'm not sure I can commit to 90 days right now?</p>
+        <p class="faq-a">That is exactly what the Discovery Call is for. Amber will help you discern whether the timing is right and answer every question you have with honesty and grace. There is no pressure — only clarity. Book the call and let God show you what's next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="book">
+  <div class="cta-inner">
+    <span class="section-label">Your Next Step</span>
+    <h2>You Have Carried This<br>Long Enough. Let's <em>Begin.</em></h2>
+    <div class="gold-line" style="margin: 24px auto 32px;"></div>
+    <p class="cta-warmth">"For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." — Ephesians 2:10</p>
+    <p>Sweet mama — that work God prepared for you? It's waiting. Your peace is waiting. Your calling is waiting. And it starts with one brave conversation.</p>
+    <p>Book your free 30-minute Discovery Call with Amber today. No pressure. No obligation. Just clarity about your next step and whether The Intensive is the right fit for this season of your life.</p>
+    <a href="https://calendly.com/keepthefaithdesigns7/30min" class="btn-primary">Book Your Free Discovery Call</a>
+    <p class="cta-payment">Investment details shared on your call · Payment via PayPal · Spots are limited</p>
+  </div>
+</section>
+
+<!-- PRESS BADGE SECTION -->
+<section style="background:#111;padding:80px 40px;border-top:1px solid #222;border-bottom:1px solid #222;">
+  <div style="width:50px;height:2px;background:#C9A84C;margin:0 auto 28px;"></div>
+  <div style="background:#fff;padding:16px 24px;width:fit-content;margin:0 auto;display:block;">
+    <img src="https://i.imgur.com/bybjf3c.png" alt="As Featured On CBS NBC FOX ABC AP" style="display:block;width:480px;max-width:90vw;height:auto;" />
+  </div>
+  <div style="width:50px;height:2px;background:#C9A84C;margin:28px auto 0;"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Amber <span>LaLoux</span></div>
+  <p class="footer-creds">Certified Biblical Health &amp; Life Coach &nbsp;·&nbsp; Global Best-Selling Author &nbsp;·&nbsp; Women's Ministry Leader</p>
+  <div class="footer-gold-line"></div>
+  <p class="footer-scripture">"She is clothed with strength and dignity, and she laughs without fear of the future." — Proverbs 31:25</p>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Amber LaLoux · Keep the Faith Designs · All rights reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

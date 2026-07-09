@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wife Momma Warrior Podcast — Amber LaLoux</title>
+<meta name="description" content="Wife Momma Warrior with Amber LaLoux: the podcast for overwhelmed, overworked mommas. Real testimonies of God's goodness, teachings on His promises, and a call for warrior women to rise.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --charcoal: #111111;
+    --card: #1A1A1A;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --burgundy: #8B2635;
+    --cream: #FAF8F4;
+    --grey: #888888;
+    --line: #222222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--cream); font-family: "Montserrat", sans-serif; font-weight: 300; line-height: 1.7; }
+  img { max-width: 100%; }
+  a { color: inherit; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 22px 40px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(10,10,10,0.94); backdrop-filter: blur(6px); z-index: 50; }
+  .nav-logo { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .nav-logo span { color: var(--gold); }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  .nav-cta { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s; }
+  .nav-cta:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+
+  section { padding: 90px 24px; }
+  .container { max-width: 1040px; margin: 0 auto; }
+  .section-label { display: block; text-align: center; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .section-title { font-family: "Cormorant Garamond", serif; text-align: center; font-size: clamp(32px, 4.5vw, 52px); font-weight: 600; line-height: 1.15; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .gold-line { width: 54px; height: 2px; background: var(--gold); margin: 28px auto; }
+  .script-line { font-family: "Dancing Script", cursive; font-size: clamp(26px, 3.5vw, 40px); color: var(--burgundy); text-shadow: 0 0 22px rgba(139,38,53,0.35); }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: background .2s, transform .2s; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-weight: 500; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; padding: 17px 40px; text-decoration: none; transition: background .2s, color .2s; }
+  .btn-ghost:hover { background: var(--gold); color: var(--ink); }
+
+  /* HERO */
+  .hero { background: radial-gradient(ellipse at 50% -20%, rgba(201,168,76,0.14), transparent 60%), var(--ink); padding: 80px 24px; }
+  .hero-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; max-width: 1120px; margin: 0 auto; }
+  .hero-cover img { display: block; width: 100%; max-width: 460px; margin: 0 auto; border: 1px solid var(--gold); box-shadow: 0 22px 60px rgba(201,168,76,0.18); }
+  .hero-right .section-label, .hero-right .section-title { text-align: left; }
+  .hero-right .gold-line { margin: 28px 0; }
+  .hero-desc { color: #CCCCCC; font-size: 17px; margin-bottom: 26px; max-width: 560px; }
+  .hero-note { margin-top: 18px; font-size: 13px; color: var(--grey); }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 44px; } .hero-right { text-align: center; } .hero-right .section-label, .hero-right .section-title { text-align: center; } .hero-right .gold-line { margin: 28px auto; } }
+
+  /* SCRIPTURE BAND */
+  .scripture-band { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; padding: 64px 24px; }
+  .scripture-band blockquote { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: clamp(22px, 3vw, 30px); line-height: 1.5; max-width: 760px; margin: 0 auto; color: var(--cream); }
+  .scripture-band blockquote b { color: var(--gold-light); font-weight: 600; }
+  .scripture-band cite { display: block; margin-top: 18px; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+
+  /* LISTEN */
+  .listen { background: var(--ink); text-align: center; }
+  .spotify-wrap { max-width: 720px; margin: 44px auto 0; }
+  .spotify-wrap iframe { border-radius: 14px; border: 0; width: 100%; }
+  .listen p.lead { max-width: 640px; margin: 0 auto; color: #CCCCCC; }
+
+  /* WHAT TO EXPECT */
+  .expect { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .expect-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 54px; }
+  .expect-card { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 40px 30px; text-align: center; }
+  .expect-icon { font-size: 30px; margin-bottom: 16px; }
+  .expect-card h3 { font-family: "Cormorant Garamond", serif; font-size: 25px; font-weight: 600; margin-bottom: 10px; }
+  .expect-card p { color: #CCCCCC; font-size: 15px; }
+  @media (max-width: 860px) { .expect-grid { grid-template-columns: 1fr; } }
+
+  /* TESTIMONY INVITE */
+  .invite { background: radial-gradient(ellipse at 50% 120%, rgba(139,38,53,0.22), transparent 65%), var(--ink); text-align: center; }
+  .invite p.lead { max-width: 660px; margin: 0 auto 34px; color: #CCCCCC; }
+
+  /* RISE AS WARRIORS */
+  .rise { background: var(--charcoal); border-top: 1px solid var(--line); }
+  .rise-grid { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; max-width: 1020px; margin: 0 auto; }
+  .rise-grid .section-label, .rise-grid .section-title { text-align: left; }
+  .rise-grid .gold-line { margin: 28px 0; }
+  .rise p { color: #CCCCCC; margin-bottom: 22px; }
+  .rise-photo img { display: block; width: 100%; border: 1px solid var(--line); }
+  .rise-list { list-style: none; margin: 0 0 30px; }
+  .rise-list li { padding-left: 28px; position: relative; margin-bottom: 12px; color: #CCCCCC; }
+  .rise-list li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+  @media (max-width: 860px) { .rise-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; } .rise-grid .section-label, .rise-grid .section-title { text-align: center; } .rise-grid .gold-line { margin: 28px auto; } .rise-list li { text-align: left; } .rise-photo { max-width: 380px; margin: 0 auto; } }
+
+  footer { border-top: 1px solid var(--line); padding: 46px 24px; text-align: center; }
+  footer .nav-logo { margin-bottom: 14px; }
+  footer p { font-size: 13px; color: var(--grey); }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--gold-light); }
+  .footer-script { font-family: "Dancing Script", cursive; font-size: 24px; color: var(--burgundy); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/keepthefaithdesigns7/30min" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-cover">
+      <img src="https://fromprayer2provision.com/podcast_cover.png" alt="Wife Momma Warrior Podcast with Amber LaLoux" onerror="this.parentElement.style.display='none';">
+    </div>
+    <div class="hero-right">
+      <span class="section-label">The Podcast</span>
+      <h1 class="section-title">Wife. Momma.<br><em>Warrior.</em></h1>
+      <div class="gold-line"></div>
+      <p class="hero-desc">This is your go-to podcast if you are an overwhelmed, overworked momma navigating the quiet pain of trials, trauma, or an unequally yoked marriage. Every episode keeps the focus on God's goodness, with real testimonies from real women and short teachings on the promises of God and how to apply them to your life.</p>
+      <p class="script-line" style="font-size: clamp(24px, 3vw, 34px); margin-bottom: 26px;">You're not alone. Let's rise together. 💛</p>
+      <a href="https://open.spotify.com/show/29l9yTEz1ypDETnERkHnTs" class="btn-primary">Listen on Spotify</a>
+      <p class="hero-note">New episodes coming as God leads</p>
+    </div>
+  </div>
+</header>
+
+<!-- SCRIPTURE -->
+<div class="scripture-band">
+  <blockquote>"They triumphed over him by the blood of the Lamb and by <b>the word of their testimony</b>."</blockquote>
+  <cite>— Revelation 12:11</cite>
+</div>
+
+<!-- LISTEN -->
+<section class="listen">
+  <span class="section-label">Listen Now</span>
+  <h2 class="section-title">Press Play, <em>Mama</em></h2>
+  <div class="gold-line"></div>
+  <p class="lead">Grab your coffee, take a breath, and let these words remind you who you are and Whose you are.</p>
+  <div class="spotify-wrap">
+    <iframe src="https://open.spotify.com/embed/show/29l9yTEz1ypDETnERkHnTs?utm_source=generator&theme=0" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Wife Momma Warrior Podcast on Spotify"></iframe>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect">
+  <div class="container">
+    <span class="section-label">What You'll Hear</span>
+    <h2 class="section-title">Every Episode Points to <em>His Goodness</em></h2>
+    <div class="gold-line"></div>
+    <div class="expect-grid">
+      <div class="expect-card">
+        <div class="expect-icon">🕊️</div>
+        <h3>Real Testimonies</h3>
+        <p>Women sharing how God carried them through trauma and trials. Proof that He is still in the business of breakthrough.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">📖</div>
+        <h3>God's Promises</h3>
+        <p>Short, practical teachings on the promises of God and how to stand on them in your marriage, your motherhood, and your battles.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">⚔️</div>
+        <h3>Warrior Training</h3>
+        <p>Learning to walk in your God-given authority, fight in the spirit for your family, and rise as the warrior He created you to be.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE YOUR TESTIMONY -->
+<section class="invite">
+  <p class="script-line">Has God brought you through?</p>
+  <h2 class="section-title">Share Your <em>Testimony</em></h2>
+  <div class="gold-line"></div>
+  <p class="lead">I am always looking for women to share how God helped them overcome trauma and trials in their lives. Your story could be the very thing that gives another woman the courage to keep standing. If God has done it for you, come tell the world about it.</p>
+  <a href="mailto:support@fromprayer2provision.com?subject=I%20want%20to%20share%20my%20testimony%20on%20Wife%20Momma%20Warrior" class="btn-primary">I Want to Share My Story</a>
+</section>
+
+<!-- RISE AS WARRIORS -->
+<section class="rise">
+  <div class="rise-grid">
+    <div>
+      <span class="section-label">The Call</span>
+      <h2 class="section-title">Warrior Women, <em>Rise Up</em></h2>
+      <div class="gold-line"></div>
+      <p>God is raising up an army of women who will stand in the gap for one another. Women who will:</p>
+      <ul class="rise-list">
+        <li>Pray boldly for other women and their families</li>
+        <li>Fast and intercede when a sister is in battle</li>
+        <li>Share testimonies that encourage and strengthen</li>
+        <li>Stand in their God-given authority and rise as warriors</li>
+      </ul>
+      <p>If that stirs something in your spirit, you belong here. Come be part of the sisterhood.</p>
+      <a href="https://www.skool.com/provision-purpose-4087/about" class="btn-ghost">Join the Sisterhood</a>
+    </div>
+    <div class="rise-photo">
+      <img src="https://fromprayer2provision.com/warrior_women.png" alt="Warrior women standing together" onerror="this.parentElement.style.display='none';">
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="nav-logo">Amber <span>LaLoux</span></div>
+  <p><a href="mailto:support@fromprayer2provision.com">support@fromprayer2provision.com</a></p>
+  <p style="margin-top:10px;">© 2026 From Prayer to Provision · Keep the Faith Designs</p>
+  <p class="footer-script">You're not alone. Let's rise together.</p>
+</footer>
+
+</body>
+</html>
