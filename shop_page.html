@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Amber LaLoux</title>
+<meta name="description" content="Shop Amber LaLoux's faith-filled resources for wives and mamas: the Prayer Warrior Workbook, digital planners, and more to help you fight for your family in the spirit.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --charcoal: #111111;
+    --card: #1A1A1A;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --burgundy: #8B2635;
+    --cream: #FAF8F4;
+    --grey: #888888;
+    --line: #222222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--cream); font-family: "Montserrat", sans-serif; font-weight: 300; line-height: 1.7; }
+  img { max-width: 100%; }
+  a { color: inherit; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 22px 40px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(10,10,10,0.94); backdrop-filter: blur(6px); z-index: 50; }
+  .nav-logo { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .nav-logo span { color: var(--gold); }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  .nav-cta { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s; }
+  .nav-cta:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+
+  section { padding: 90px 24px; }
+  .container { max-width: 1040px; margin: 0 auto; }
+  .section-label { display: block; text-align: center; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .section-title { font-family: "Cormorant Garamond", serif; text-align: center; font-size: clamp(32px, 4.5vw, 52px); font-weight: 600; line-height: 1.15; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .gold-line { width: 54px; height: 2px; background: var(--gold); margin: 28px auto; }
+  .script-line { font-family: "Dancing Script", cursive; font-size: clamp(26px, 3.5vw, 40px); color: var(--burgundy); text-shadow: 0 0 22px rgba(139,38,53,0.35); }
+
+  /* HERO */
+  .hero { text-align: center; padding: 100px 24px 70px; background:
+    radial-gradient(ellipse at 50% -20%, rgba(201,168,76,0.14), transparent 60%), var(--ink); }
+  .hero h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 6vw, 72px); font-weight: 600; line-height: 1.1; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-desc { max-width: 700px; margin: 0 auto; color: #CCCCCC; font-size: 17px; }
+
+  /* PRODUCT CARD */
+  .shop { background: var(--ink); }
+  .product { display: grid; grid-template-columns: 400px 1fr; gap: 54px; align-items: center; max-width: 1000px; margin: 0 auto 60px; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 48px; }
+  .product-cover img { display: block; width: 100%; border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,0.5); }
+  .product-cover .cover-placeholder { display: flex; align-items: center; justify-content: center; text-align: center; aspect-ratio: 1/1; background: var(--charcoal); border: 1px dashed var(--gold); color: var(--grey); font-size: 13px; letter-spacing: 1px; padding: 20px; }
+  .product-kicker { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .product h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; line-height: 1.15; margin-bottom: 12px; }
+  .product .stars { color: var(--gold); letter-spacing: 3px; margin-bottom: 6px; font-size: 15px; }
+  .product .price { font-family: "Cormorant Garamond", serif; font-size: 26px; color: var(--gold-light); margin-bottom: 20px; }
+  .product p.desc { color: #CCCCCC; font-size: 16px; margin-bottom: 20px; }
+  .product ul.features { list-style: none; margin: 0 0 24px; }
+  .product ul.features li { padding-left: 26px; position: relative; margin-bottom: 8px; color: #CCCCCC; font-size: 15px; }
+  .product ul.features li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+  .product-verse { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 17px; color: var(--gold-light); border-left: 2px solid var(--gold); padding-left: 20px; margin-bottom: 24px; }
+  .product-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 16px 32px; text-decoration: none; transition: background .2s, transform .2s; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-soon { display: inline-block; border: 1px dashed var(--grey); color: var(--grey); font-weight: 600; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 15px 30px; text-decoration: none; cursor: default; }
+  @media (max-width: 860px) { .product { grid-template-columns: 1fr; gap: 34px; padding: 34px 24px; text-align: center; } .product-cover { max-width: 320px; margin: 0 auto; } .product ul.features { text-align: left; max-width: 340px; margin-left: auto; margin-right: auto; } .product-verse { text-align: left; } .product-btns { justify-content: center; } }
+
+  /* SHOP ALL */
+  .shopall { background: var(--charcoal); border-top: 1px solid var(--line); text-align: center; }
+  .shopall p.lead { max-width: 600px; margin: 0 auto 34px; color: #CCCCCC; }
+
+  footer { border-top: 1px solid var(--line); padding: 46px 24px; text-align: center; }
+  footer .nav-logo { margin-bottom: 14px; }
+  footer p { font-size: 13px; color: var(--grey); }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--gold-light); }
+  .footer-script { font-family: "Dancing Script", cursive; font-size: 24px; color: var(--burgundy); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/shop_page.html">Shop</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/resources_page.html">Resources</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/keepthefaithdesigns7/30min" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="section-label">The Shop</span>
+  <h1>Fight for Your <em>Family</em></h1>
+  <p class="script-line" style="margin: 22px 0 6px;">Made with prayer, for you 💛</p>
+  <div class="gold-line"></div>
+  <p class="hero-desc">Every resource here was born out of my own walk with the Lord and my heart to equip wives and mamas to fight for their families in the spirit. These are the very tools I wish I'd had in my hardest seasons.</p>
+</header>
+
+<!-- PRODUCT: PRAYER WARRIOR WORKBOOK -->
+<section class="shop">
+  <div class="product">
+    <div class="product-cover">
+      <img src="https://fromprayer2provision.com/workbook_cover.png" alt="Prayer Warrior Workbook by Amber LaLoux">
+    </div>
+    <div class="product-body">
+      <p class="product-kicker">Printable · Digital Download</p>
+      <h2>Prayer Warrior Workbook</h2>
+      <div class="stars">★★★★★</div>
+      <p class="price">$27 · Instant Download</p>
+      <p class="desc">Mama, you were never meant to just survive the chaos. You were made to fight for your family in the spirit. I prayed for my husband's salvation for 17 years before God answered, and this 31-day battle plan is the very one I learned in those years. Now it's yours.</p>
+      <ul class="features">
+        <li>Know who God says you are before you pray for anyone else</li>
+        <li>Consecrate yourself and make your own anointing oil</li>
+        <li>Cover your home room by room, and stand in the gap for your husband and children</li>
+        <li>Praying With Expectation trackers and a 31-Day Shield of Faith coloring tracker</li>
+      </ul>
+      <p class="product-verse">"For God has not given us a spirit of fear, but of power, and of love, and of a sound mind." 2 Timothy 1:7</p>
+      <div class="product-btns">
+        <a href="https://www.etsy.com/listing/4540897924/prayer-warrior-workbook-31-day-spiritual" class="btn-primary">Get It on Etsy</a>
+        <span class="btn-soon">Amazon Paperback Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT: PEACE-FILLED DAYS PLANNER -->
+<section class="shop" style="padding-top:0;">
+  <div class="product">
+    <div class="product-cover">
+      <img src="https://fromprayer2provision.com/planner_cover.png" alt="Peace-Filled Days Complete Done-for-You Mama Planner">
+    </div>
+    <div class="product-body">
+      <p class="product-kicker">All-in-One · Digital Planner</p>
+      <h2>Peace-Filled Days</h2>
+      <div class="stars">★★★★★</div>
+      <p class="price">$99 · Instant Download</p>
+      <p class="desc">The Complete Done-for-You Mama Planner. Everything you need to stay organized, productive, and filled with peace, without the stress or overwhelm. It's fully planned for you, step by step, so you can focus on what truly matters: faith, family, and joy.</p>
+      <ul class="features">
+        <li>Daily Scripture and gratitude prompts</li>
+        <li>Chore systems, meal plans, and printable shopping lists</li>
+        <li>Daily workouts and self-love reminders</li>
+        <li>Holiday prep, emergency readiness, and food preservation tips</li>
+      </ul>
+      <div class="resource-quote" style="border-left:2px solid var(--gold);padding:14px 22px;margin-bottom:24px;background:rgba(201,168,76,0.05);">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--cream);line-height:1.5;margin-bottom:8px;">"Seller is amazing, item is so awesome! Thank you so very much!! Can't wait to really put it to use."</p>
+        <cite style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-style:normal;">— Brooke, verified Etsy buyer ★★★★★</cite>
+      </div>
+      <p class="product-verse">"I can do all things through Christ who gives me strength." Philippians 4:13</p>
+      <div class="product-btns">
+        <a href="https://www.etsy.com/listing/4424772009/peace-filled-days-the-complete-done-for" class="btn-primary">Get It on Etsy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP ALL -->
+<section class="shopall">
+  <p class="script-line">More in the shop</p>
+  <h2 class="section-title">Visit My Full <em>Etsy Shop</em></h2>
+  <div class="gold-line"></div>
+  <p class="lead">Digital planners, printables, and faith-filled designs to bring peace and purpose to your home. New resources are always in the works.</p>
+  <a href="https://www.etsy.com/shop/keepthefaithdesign" class="btn-primary">Browse Keep the Faith Designs</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="nav-logo">Amber <span>LaLoux</span></div>
+  <p><a href="mailto:support@fromprayer2provision.com">support@fromprayer2provision.com</a></p>
+  <p style="margin-top:10px;">© 2026 From Prayer to Provision · Keep the Faith Designs</p>
+  <p class="footer-script">Made with prayer, for you.</p>
+</footer>
+
+</body>
+</html>

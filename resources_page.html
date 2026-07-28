@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom Resources — Amber LaLoux</title>
+<meta name="description" content="Kingdom resources Amber LaLoux personally recommends: books and tools from trusted voices to strengthen your faith, your family, and your walk with Christ.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --charcoal: #111111;
+    --card: #1A1A1A;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --burgundy: #8B2635;
+    --cream: #FAF8F4;
+    --grey: #888888;
+    --line: #222222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--cream); font-family: "Montserrat", sans-serif; font-weight: 300; line-height: 1.7; }
+  img { max-width: 100%; }
+  a { color: inherit; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 22px 40px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(10,10,10,0.94); backdrop-filter: blur(6px); z-index: 50; }
+  .nav-logo { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .nav-logo span { color: var(--gold); }
+  .fp-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+  .fp-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #FAF8F4; opacity: .85; transition: color .2s; }
+  .fp-links a:hover { color: #E8C96A; opacity: 1; }
+  .nav-cta { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s; }
+  .nav-cta:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 900px) { .fp-links { width: 100%; order: 3; margin-top: 12px; gap: 14px; } }
+
+  section { padding: 90px 24px; }
+  .container { max-width: 1040px; margin: 0 auto; }
+  .section-label { display: block; text-align: center; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .section-title { font-family: "Cormorant Garamond", serif; text-align: center; font-size: clamp(32px, 4.5vw, 52px); font-weight: 600; line-height: 1.15; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .gold-line { width: 54px; height: 2px; background: var(--gold); margin: 28px auto; }
+  .script-line { font-family: "Dancing Script", cursive; font-size: clamp(26px, 3.5vw, 40px); color: var(--burgundy); text-shadow: 0 0 22px rgba(139,38,53,0.35); }
+
+  /* HERO */
+  .hero { text-align: center; padding: 100px 24px 70px; background:
+    radial-gradient(ellipse at 50% -20%, rgba(201,168,76,0.14), transparent 60%), var(--ink); }
+  .hero h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 6vw, 72px); font-weight: 600; line-height: 1.1; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-desc { max-width: 700px; margin: 0 auto; color: #CCCCCC; font-size: 17px; }
+
+  /* RESOURCE CARD */
+  .resources { background: var(--ink); }
+  .resource { display: grid; grid-template-columns: 380px 1fr; gap: 54px; align-items: center; max-width: 1000px; margin: 0 auto 60px; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 48px; }
+  .resource-cover img { display: block; width: 100%; border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,0.5); }
+  .resource-cover .cover-placeholder { display: flex; align-items: center; justify-content: center; text-align: center; aspect-ratio: 1/1; background: var(--charcoal); border: 1px dashed var(--gold); color: var(--grey); font-size: 13px; letter-spacing: 1px; padding: 20px; }
+  .resource-kicker { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .resource h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; line-height: 1.15; margin-bottom: 6px; }
+  .resource .author { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 19px; color: var(--gold-light); margin-bottom: 20px; }
+  .resource p.desc { color: #CCCCCC; font-size: 16px; margin-bottom: 24px; }
+  .resource-quote { border-left: 2px solid var(--gold); padding: 14px 22px; margin-bottom: 16px; background: rgba(201,168,76,0.05); }
+  .resource-quote p { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 18px; color: var(--cream); line-height: 1.5; margin-bottom: 8px; }
+  .resource-quote cite { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+  .resource-quote.placeholder { border-left-style: dashed; }
+  .resource-quote.placeholder p { color: var(--grey); font-style: italic; }
+  .resource-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 15px 30px; text-decoration: none; transition: background .2s, transform .2s; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-weight: 600; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 14px 28px; text-decoration: none; transition: background .2s, color .2s; }
+  .btn-ghost:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 860px) { .resource { grid-template-columns: 1fr; gap: 34px; padding: 34px 24px; text-align: center; } .resource-cover { max-width: 300px; margin: 0 auto; } .resource-quote { text-align: left; } .resource-btns { justify-content: center; } }
+
+  /* FEATURE INVITE */
+  .invite { background: var(--charcoal); border-top: 1px solid var(--line); text-align: center; }
+  .invite p.lead { max-width: 640px; margin: 0 auto 34px; color: #CCCCCC; }
+
+  footer { border-top: 1px solid var(--line); padding: 46px 24px; text-align: center; }
+  footer .nav-logo { margin-bottom: 14px; }
+  footer p { font-size: 13px; color: var(--grey); }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--gold-light); }
+  .footer-script { font-family: "Dancing Script", cursive; font-size: 24px; color: var(--burgundy); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://fromprayer2provision.com/" style="text-decoration:none;color:inherit"><div class="nav-logo">Amber <span>LaLoux</span></div></a>
+  <div class="fp-links">
+    <a href="https://fromprayer2provision.com/">Home</a>
+    <a href="https://fromprayer2provision.com/about_v2.html">About</a>
+    <a href="https://fromprayer2provision.com/peaceful_mama_intensive.html">The Intensive</a>
+    <a href="https://fromprayer2provision.com/shop_page.html">Shop</a>
+    <a href="https://fromprayer2provision.com/speaker_page.html">Speaking</a>
+    <a href="https://fromprayer2provision.com/podcast_page.html">Podcast</a>
+    <a href="https://fromprayer2provision.com/pakistan_page.html">Pakistan</a>
+    <a href="https://fromprayer2provision.com/resources_page.html">Resources</a>
+    <a href="https://fromprayer2provision.com/contact_page.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/keepthefaithdesigns7/30min" class="nav-cta">Book Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="section-label">Kingdom Resources</span>
+  <h1>Resources I <em>Recommend</em></h1>
+  <p class="script-line" style="margin: 22px 0 6px;">Tools for the journey 📖</p>
+  <div class="gold-line"></div>
+  <p class="hero-desc">These are Kingdom resources I personally recommend, created by trusted voices, many of them guests on the Wife Momma Warrior podcast. Every one is here because I believe it can strengthen your faith, protect your family, and draw your heart closer to Jesus.</p>
+</header>
+
+<!-- RESOURCE: BEING BRAVE -->
+<section class="resources">
+  <div class="resource">
+    <div class="resource-cover">
+      <img src="https://fromprayer2provision.com/being_brave_cover.png" alt="Being Brave for Kids by Joseph Woodley">
+    </div>
+    <div class="resource-body">
+      <p class="resource-kicker">Children's Book · Healing & Protection</p>
+      <h2>Being Brave</h2>
+      <p class="author">by Joseph Woodley</p>
+      <p class="desc">A gentle, sensitive resource that helps mamas talk to their children about sexual abuse, whether a child has been hurt or is simply being taught what to do if they ever are. Through the voice of his childhood self, Joseph extends a hand to help children move from pain, shame, and fear toward healing and protection alongside safe adults. Every word is delicately written and age-appropriate, giving little hearts a layer of defense against fear and shame.</p>
+      <div class="resource-quote">
+        <p>"I love it! Very well done, and I know this book will become a wonderful asset to those who need it. Thank you both for having the heart to create it."</p>
+        <cite>— Liz N., Child Psychiatrist</cite>
+      </div>
+      <div class="resource-quote placeholder">
+        <p>Reader testimony coming soon...</p>
+        <cite>— A grateful mama</cite>
+      </div>
+      <div class="resource-btns">
+        <a href="https://talesong.com/product/being-brave-for-kids-preorders-available/" class="btn-primary">Order the Book</a>
+        <a href="https://talesong.com/product/bravebook/" class="btn-ghost">Support Joseph</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FROM AMBER'S OWN LIBRARY -->
+<section class="resources" style="background: var(--charcoal); border-top: 1px solid var(--line);">
+  <span class="section-label">From Amber's Own Library</span>
+  <h2 class="section-title">Resources <em>I Created</em></h2>
+  <div class="gold-line"></div>
+  <div class="resource" style="max-width:1000px;">
+    <div class="resource-cover">
+      <img src="https://fromprayer2provision.com/workbook_cover.png" alt="Prayer Warrior Workbook by Amber LaLoux">
+    </div>
+    <div class="resource-body">
+      <p class="resource-kicker">Printable · Digital Download</p>
+      <h2>Prayer Warrior Workbook</h2>
+      <p class="author">by Amber LaLoux</p>
+      <p class="desc">A 31-day spiritual warfare battle plan for Christian mamas ready to fight for their families in the spirit. Born from my own 17-year prayer journey, it will teach you to cover your home, stand in the gap for your husband and children, and pray with expectation.</p>
+      <div class="resource-btns">
+        <a href="https://fromprayer2provision.com/shop_page.html" class="btn-primary">See It in the Shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE INVITE -->
+<section class="invite">
+  <p class="script-line">Have a Kingdom resource?</p>
+  <h2 class="section-title">Want to Be <em>Featured?</em></h2>
+  <div class="gold-line"></div>
+  <p class="lead">If you're a podcast guest or Kingdom creator with a book, study, or resource that serves families and points hearts to Christ, I'd love to hear about it. Reach out and tell me about what God has placed on your heart to create.</p>
+  <a href="mailto:support@fromprayer2provision.com?subject=Resource%20to%20feature%20on%20From%20Prayer%20to%20Provision" class="btn-primary">Tell Me About Your Resource</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="nav-logo">Amber <span>LaLoux</span></div>
+  <p><a href="mailto:support@fromprayer2provision.com">support@fromprayer2provision.com</a></p>
+  <p style="margin-top:10px;">© 2026 From Prayer to Provision · Keep the Faith Designs</p>
+  <p class="footer-script">Equipping families for the Kingdom.</p>
+</footer>
+
+</body>
+</html>
