@@ -127,7 +127,7 @@ function media(u,label){ if(/\.(mp3|m4a|wav)$/i.test(u)) return '<audio controls
 var box;
 if(PRAYER_URL && (box=document.querySelector('[data-config=PRAYER_URL]'))) box.innerHTML=media(PRAYER_URL,'Listen to Your Prayer');
 if(SONG_URL && (box=document.querySelector('[data-config=SONG_URL]'))) box.innerHTML=media(SONG_URL,'Play Your Song');
-if(COUPON && (box=document.querySelector('[data-config=COUPON]'))) box.innerHTML='<div class="code">'+COUPON+'</div><br>'+(ETSY_URL?'<a class="btn" href="'+ETSY_URL+'" target="_blank" rel="noopener">Visit My Etsy Shop</a>':'');
+if(COUPON && (box=document.querySelector('[data-config=COUPON]'))) box.innerHTML='<div class="code">'+COUPON+'</div><br>'+(ETSY_URL?'<a class="btn" href="'+ETSY_URL+'" target="_blank" rel="noopener">Shop with My Discount</a>':'');
 </script>
 </body>
 </html>
