@@ -69,7 +69,7 @@ footer{text-align:center;padding:30px 20px;font-size:15px;color:#7A6355}
 <section class="gift" id="prayer">
   <div class="num">1</div>
   <div>
-    <h2>A Prayer Just for You</h2>
+    <h2>Your Warrior Prayer</h2>
     <p>Find a quiet moment, take a deep breath, and let me pray over you and your home.</p>
     <div data-config="PRAYER_URL"><p class="soon">Your recorded prayer is being added. Check back soon.</p></div>
   </div>
@@ -120,15 +120,15 @@ footer{text-align:center;padding:30px 20px;font-size:15px;color:#7A6355}
 
 <script>
 /* ===== Amber: fill these in and the page updates itself ===== */
-var PRAYER_URL = "";   // link to your recorded prayer (MP3 file in this folder, or a YouTube/Drive link)
+var PRAYER_URL = "warrior_prayer.mp4";   // link to your recorded prayer (MP3 file in this folder, or a YouTube/Drive link)
 var SONG_URL   = "warrior_call_anthem.mp4";   // link to your Warrior Call song (MP3 file in this folder, or a YouTube/Suno link)
 var COUPON     = "WARRIORWOMENOFGOD";   // your Etsy coupon code, e.g. "WARRIOR20"
 var ETSY_URL   = "https://keepthefaithdesign.etsy.com?coupon=WARRIORWOMENOFGOD";   // your Etsy shop link
 /* ============================================================ */
-function media(u,label){ if(/\.(mp4|mov)$/i.test(u)) return '<video controls playsinline preload="none" poster="warrior_call_anthem_poster.jpg" src="'+u+'" style="width:100%;border-radius:8px;margin-top:6px;box-shadow:0 10px 24px rgba(58,10,22,.18)"></video>'; if(/\.(mp3|m4a|wav)$/i.test(u)) return '<audio controls preload="none" src="'+u+'"></audio>'; return '<a class="btn" href="'+u+'" target="_blank" rel="noopener">'+label+'</a>'; }
+function media(u,label,poster){ if(/\.(mp4|mov)$/i.test(u)) return '<video controls playsinline preload="none" poster="'+(poster||'')+'" src="'+u+'" style="width:100%;border-radius:8px;margin-top:6px;box-shadow:0 10px 24px rgba(58,10,22,.18)"></video>'; if(/\.(mp3|m4a|wav)$/i.test(u)) return '<audio controls preload="none" src="'+u+'"></audio>'; return '<a class="btn" href="'+u+'" target="_blank" rel="noopener">'+label+'</a>'; }
 var box;
-if(PRAYER_URL && (box=document.querySelector('[data-config=PRAYER_URL]'))) box.innerHTML=media(PRAYER_URL,'Listen to Your Prayer');
-if(SONG_URL && (box=document.querySelector('[data-config=SONG_URL]'))) box.innerHTML=media(SONG_URL,'Play Your Song');
+if(PRAYER_URL && (box=document.querySelector('[data-config=PRAYER_URL]'))) box.innerHTML=media(PRAYER_URL,'Listen to Your Prayer','warrior_prayer_poster.jpg');
+if(SONG_URL && (box=document.querySelector('[data-config=SONG_URL]'))) box.innerHTML=media(SONG_URL,'Play Your Song','warrior_call_anthem_poster.jpg');
 if(COUPON && (box=document.querySelector('[data-config=COUPON]'))) box.innerHTML='<div class="code">'+COUPON+'</div><br>'+(ETSY_URL?'<a class="btn" href="'+ETSY_URL+'" target="_blank" rel="noopener">Shop with My Discount</a>':'');
 </script>
 </body>
