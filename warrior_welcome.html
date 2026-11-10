@@ -76,8 +76,8 @@ footer{text-align:center;padding:30px 20px;font-size:15px;color:#7A6355}
 <section class="gift" id="song">
   <div class="num">2</div>
   <div>
-    <h2>Your Warrior Call Song</h2>
-    <p>An original song written for women who answer the call. Play it loud on the hard days.</p>
+    <h2>Rise Up, Warrior Woman</h2>
+    <p>Your Warrior Call anthem, an original song written for women who answer the call. Play it loud on the hard days.</p>
     <div data-config="SONG_URL"><p class="soon">Your Warrior Call song is being added. Check back soon.</p></div>
   </div>
 </section>
@@ -119,11 +119,11 @@ footer{text-align:center;padding:30px 20px;font-size:15px;color:#7A6355}
 <script>
 /* ===== Amber: fill these in and the page updates itself ===== */
 var PRAYER_URL = "";   // link to your recorded prayer (MP3 file in this folder, or a YouTube/Drive link)
-var SONG_URL   = "";   // link to your Warrior Call song (MP3 file in this folder, or a YouTube/Suno link)
+var SONG_URL   = "warrior_call_anthem.mp4";   // link to your Warrior Call song (MP3 file in this folder, or a YouTube/Suno link)
 var COUPON     = "WARRIORWOMENOFGOD";   // your Etsy coupon code, e.g. "WARRIOR20"
 var ETSY_URL   = "https://keepthefaithdesign.etsy.com?coupon=WARRIORWOMENOFGOD";   // your Etsy shop link
 /* ============================================================ */
-function media(u,label){ if(/\.(mp3|m4a|wav)$/i.test(u)) return '<audio controls preload="none" src="'+u+'"></audio>'; return '<a class="btn" href="'+u+'" target="_blank" rel="noopener">'+label+'</a>'; }
+function media(u,label){ if(/\.(mp4|mov)$/i.test(u)) return '<video controls playsinline preload="none" poster="warrior_call_anthem_poster.jpg" src="'+u+'" style="width:100%;border-radius:8px;margin-top:6px;box-shadow:0 10px 24px rgba(58,10,22,.18)"></video>'; if(/\.(mp3|m4a|wav)$/i.test(u)) return '<audio controls preload="none" src="'+u+'"></audio>'; return '<a class="btn" href="'+u+'" target="_blank" rel="noopener">'+label+'</a>'; }
 var box;
 if(PRAYER_URL && (box=document.querySelector('[data-config=PRAYER_URL]'))) box.innerHTML=media(PRAYER_URL,'Listen to Your Prayer');
 if(SONG_URL && (box=document.querySelector('[data-config=SONG_URL]'))) box.innerHTML=media(SONG_URL,'Play Your Song');
